@@ -17,21 +17,19 @@ airquality <- data.frame(airquality, na.rm = TRUE)
 
 shinyServer(function(input, output) {
 
-    color <- c("red", "blue", "green", "yellow", "orange", "pink")
-
     output$main_plot <- renderPlot({
      if(input$aq_indicator == "Ozone"){
          hist(airquality$Ozone,
               probability = TRUE,
               breaks = as.numeric(input$n_breaks),
-              xlab = "Ozone Levels", col = color,
+              xlab = "Ozone Levels", col = "blue",
               main = "Air Quality - Ozone Levels")
         }
         if(input$aq_indicator == "Solar.R"){
             hist(airquality$Solar.R,
                  probability = TRUE,
                  breaks = as.numeric(input$n_breaks),
-                 xlab = "Solar Radiation Levels", col = color,
+                 xlab = "Solar Radiation Levels", col = "red",
                  main = "Air Quality - Solar Radiation Levels")
         }
 
@@ -39,7 +37,7 @@ shinyServer(function(input, output) {
             hist(airquality$Wind,
                  probability = TRUE,
                  breaks = as.numeric(input$n_breaks),
-                 xlab = "Wind Levels", col = color,
+                 xlab = "Wind Levels", col = "yellow",
                  main = "Air Quality - Wind Levels")
         }
 
@@ -47,7 +45,7 @@ shinyServer(function(input, output) {
             hist(airquality$Temp,
                  probability = TRUE,
                  breaks = as.numeric(input$n_breaks),
-                 xlab = "Temperature Levels", col = color,
+                 xlab = "Temperature Levels", col = "green",
                  main = "Air Quality - Temperature Levels")
         }
 
