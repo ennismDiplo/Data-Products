@@ -1,0 +1,37 @@
+---
+title: "Week 4 Project Shiny App Documentation"
+author: "Michael Ennis"
+date: "July 22, 2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## App Description
+
+This document accompanies the the Week 4 Project for the Shiny App. 
+This simple app displays histograms of the four different air quality indicators in the airquality dataset that comes with the r installation.
+
+The user can interact with the app by selecting from any of the four air quality options from the dropdown list. S/he can select the number of columns to display in each histogram, can use a checkbox to toggle between displaying individual data points on the x-axis.
+
+## Inputs 
+
+* Air quality options dropdown list with four options (Ozone, Solar.R, Wind and Temp).
+
+* Number of columns to display in the histogram; a dropdown list to select from.
+
+* A checkbox for user to chose whether to display individual data points or not.
+
+#Outputs
+
+The app's output consists of:
+
+* Histograms for each of the four air quality options (Ozone, Solar.R, Wind and Temp) - depending on the option selected.
+
+* Histograms with varying number of columns, ddepending on the number seleccted from the dropdown list.
+
+* Histograms with the individual data points indicated on the x-axis.
+
